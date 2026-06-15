@@ -1,19 +1,25 @@
-"""Induction heat control target generator."""
+"""
+Induction Heat Controller
+
+Prototype controller for multi-zone induction heating setpoints.
+"""
+
 from dataclasses import dataclass
 
+
 @dataclass
-class HeatZoneTarget:
+class HeatZoneCommand:
     zone_id: str
-    target_temperature_c: float
-    max_temperature_c: float
-    power_limit_percent: float
+    target_temp_c: float
+    enable: bool
+
 
 class InductionHeatController:
-    def staged_targets(self, final_temp_c: float = 210.0) -> list[HeatZoneTarget]:
+    def build_ramp_profile(self, outlet_target_c: float = 220.0) -> list[HeatZoneCommand]:
         return [
-            HeatZoneTarget("Z1_PREHEAT", 120.0, 150.0, 45.0),
-            HeatZoneTarget("Z2_MELT", 170.0, 190.0, 65.0),
-            HeatZoneTarget("Z3_STABILIZE", 195.0, 215.0, 75.0),
-            HeatZoneTarget("Z4_FINAL", final_temp_c, 225.0, 85.0),
-            HeatZoneTarget("GUN_BODY", final_temp_c, 225.0, 55.0),
+            HeatZoneCommand("zone_1_preheat", 120.0, True),
+            HeatZoneCommand("zone_2_softening", 160.0, True),
+            HeatZoneCommand("zone_3_melting", 190.0, True),
+            HeatZoneCommand("zone_4_stabilization", outlet_target_c, True),
+            HeatZoneCommand("zone_5_gun_inlet", outlet_target_c, True),
         ]
