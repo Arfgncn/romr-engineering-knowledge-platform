@@ -1,26 +1,35 @@
-"""Robot command layer."""
+"""
+Robot Command Layer
+
+Converts RMDE decisions into industrial robot and X/Y rail target commands.
+"""
+
 from dataclasses import dataclass
+
 
 @dataclass
 class RobotCommand:
-    reference_id: str
-    x_start_m: float
-    x_end_m: float
-    y_target_m: float
-    z_height_mm: float
-    tool_angle_deg: float
-    line_width_cm: float
-    paint_temperature_c: float
+    reference_point_id: str
+    target_x_m: float
+    target_y_m: float
+    target_z_m: float
+    wrist_angle_deg: float
+    gun_enable: bool
+    safe_standby: bool = False
+
 
 class RobotCommandLayer:
-    def from_reference_point(self, p_id: str, distance_m: float, robot_target_y_m: float, line_width_cm: float) -> RobotCommand:
-        return RobotCommand(
-            reference_id=p_id,
-            x_start_m=distance_m,
-            x_end_m=distance_m + 0.5,
-            y_target_m=robot_target_y_m,
-            z_height_mm=25.0,
-            tool_angle_deg=0.0,
-            line_width_cm=line_width_cm,
-            paint_temperature_c=210.0,
-        )
+    def build_commands(self, decisions, nozzle_height_m: float = 0.25) -> list[RobotCommand]:
+        commands = []
+        for i, d in enumerate(decisions):
+            commands.append(
+                RobotCommand(
+                    reference_point_id=d.reference_point_id,
+                    target_x_m=i * 0.5,
+                    target_y_m=d.robot_target_y_m,
+                    target_z_m=nozzle_height_m,
+                    wrist_angle_deg=0.0,
+                    gun_enable=d.line_required,
+                )
+            )
+        return commands
