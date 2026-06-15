@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "name": "ROMR International Standards Library V1",
+    "status": "engineering_reference",
+    "note": "Parameters are preliminary engineering reference ranges. Final field deployment must verify the official current regulation of the relevant country, authority, municipality, airport, or industrial site."
+  },
+  "regions": {
+    "europe": {
+      "standards": [
+        "EN 1436",
+        "EN 1824",
+        "EN 13197",
+        "country-specific national road marking regulations"
+      ],
+      "architecture_note": "Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry.",
+      "rules": [
+        {
+          "road_type": "urban_roads",
+          "line_type": "lane_marking",
+          "line_width_cm": "10-12",
+          "thickness": "project/material dependent",
+          "line_gap": "3 m / 3 m",
+          "color": "white"
+        },
+        {
+          "road_type": "rural_two_way",
+          "line_type": "center_broken_line",
+          "line_width_cm": "10-15",
+          "thickness": "project/material dependent",
+          "line_gap": "3 m / 9 m",
+          "color": "white"
+        },
+        {
+          "road_type": "warning_intersection",
+          "line_type": "broken_warning_line",
+          "line_width_cm": "10-15",
+          "thickness": "project/material dependent",
+          "line_gap": "4/6 m or 3/3 m",
+          "color": "white"
+        },
+        {
+          "road_type": "multi_lane",
+          "line_type": "lane_separator",
+          "line_width_cm": "10-15",
+          "thickness": "project/material dependent",
+          "line_gap": "7 m / 2 m",
+          "color": "white"
+        },
+        {
+          "road_type": "motorway",
+          "line_type": "lane_marking",
+          "line_width_cm": "15",
+          "thickness": "project/material dependent",
+          "line_gap": "6 m / 9-12 m",
+          "color": "white"
+        },
+        {
+          "road_type": "motorway_edge",
+          "line_type": "continuous_edge_line",
+          "line_width_cm": "15-25",
+          "thickness": "project/material dependent",
+          "line_gap": "continuous",
+          "color": "white"
+        }
+      ]
+    },
+    "usa": {
+      "standards": [
+        "MUTCD",
+        "AASHTO",
+        "ASTM"
+      ],
+      "rules": [
+        {
+          "road_type": "urban_roads",
+          "line_type": "lane_marking",
+          "line_width_cm": "10-15",
+          "line_gap": "3 m / 9 m",
+          "color": "white"
+        },
+        {
+          "road_type": "two_way_roads",
+          "line_type": "centerline",
+          "line_width_cm": "10-15",
+          "line_gap": "3 m / 9 m",
+          "color": "yellow"
+        },
+        {
+          "road_type": "interstate_edge",
+          "line_type": "edge_line",
+          "line_width_cm": "20-25",
+          "line_gap": "continuous",
+          "color": "white"
+        },
+        {
+          "road_type": "no_passing",
+          "line_type": "double_solid_centerline",
+          "line_width_cm": "10-15 x2",
+          "line_gap": "continuous",
+          "color": "yellow"
+        },
+        {
+          "road_type": "crosswalk",
+          "line_type": "zebra/transverse",
+          "line_width_cm": "30-60",
+          "line_gap": "variable",
+          "color": "white"
+        }
+      ],
+      "color_logic": {
+        "same_direction": "white",
+        "opposing_direction": "yellow",
+        "road_edge": "white",
+        "temporary": "orange",
+        "accessible_parking": "blue"
+      }
+    },
+    "canada": {
+      "standards": [
+        "TAC",
+        "Provincial Highway Standards"
+      ],
+      "climate_profile": "severe_winter",
+      "rules": [
+        {
+          "road_type": "urban_roads",
+          "line_type": "lane_marking",
+          "line_width_cm": "10-15",
+          "thickness_mm": "1.5-3",
+          "line_gap": "3 m / 3 m",
+          "color": "white"
+        },
+        {
+          "road_type": "rural_roads",
+          "line_type": "centerline",
+          "line_width_cm": "10-15",
+          "thickness_mm": "2-4",
+          "line_gap": "3 m / 9 m",
+          "color": "yellow"
+        },
+        {
+          "road_type": "provincial_highways",
+          "line_type": "edge_line",
+          "line_width_cm": "20",
+          "thickness_mm": "3-5",
+          "line_gap": "continuous",
+          "color": "white"
+        },
+        {
+          "road_type": "freeway_motorway",
+          "line_type": "lane_separator",
+          "line_width_cm": "15-20",
+          "thickness_mm": "3-5",
+          "line_gap": "6 m / 12 m",
+          "color": "white"
+        },
+        {
+          "road_type": "snow_risk",
+          "line_type": "high_visibility_edge",
+          "line_width_cm": "20-25",
+          "thickness_mm": "4-5",
+          "line_gap": "continuous",
+          "color": "white"
+        }
+      ]
+    },
+    "russia": {
+      "standards": [
+        "GOST",
+        "federal highway criteria",
+        "regional climate requirements"
+      ],
+      "climate_profile": "severe_cold_snow_ice",
+      "requirements": [
+        "cold-weather resistance",
+        "snow visibility",
+        "nighttime visibility",
+        "snowplow resistance",
+        "wear resistance",
+        "edge guidance visibility"
+      ]
+    },
+    "gcc": {
+      "standards": [
+        "GCC regional / authority-specific standards"
+      ],
+      "climate_profile": "desert_uv_heat",
+      "ai_decision": "Thick-film, UV-resistant, high-retroreflective marking for desert motorways."
+    },
+    "turkiye": {
+      "standards": [
+        "national road marking standards",
+        "municipal specifications",
+        "motorway authority requirements"
+      ],
+      "ai_decision_examples": [
+        "motorway: 15-20 cm motorway lane standard",
+        "urban road: 3 m / 3 m urban lane structure"
+      ]
+    },
+    "india": {
+      "standards": [
+        "IRC / national highway and local authority standards"
+      ],
+      "note": "Parameter tables must be loaded from the relevant current Indian road authority standards during deployment."
+    },
+    "japan": {
+      "ai_decision": "Precision-geometry urban marking mode."
+    },
+    "south_korea": {
+      "ai_decision": "Smart city ITS-compatible high-visibility markings."
+    },
+    "china": {
+      "ai_decision": "High-speed guidance standard for expressways."
+    },
+    "airport": {
+      "standards": [
+        "ICAO",
+        "FAA",
+        "local civil aviation authority"
+      ],
+      "scenario": "runway, taxiway, apron markings"
+    },
+    "industrial_agv": {
+      "scenario": "heavy-wear-resistant safety marking and AGV/robotic guidance lines"
+    }
+  }
+}
