@@ -1,0 +1,58 @@
+site_name: ROMR Engineering Knowledge Platform
+site_description: Integrated engineering knowledge base for AI-Based Autonomous Road Marking Platform
+site_author: ROMR Project
+repo_name: romr-engineering-knowledge-platform
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: black
+      accent: amber
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - assets/romr.css
+
+nav:
+  - Home: index.md
+  - System Map: 01-system-flow.md
+  - Pellet Paint: 02-pellet-paint-system.md
+  - Induction Heating: 03-induction-heating-system.md
+  - Thermoplastic Gun: 04-next-generation-thermoplastic-gun.md
+  - Robot + X/Y Rail: 05-robot-arm-xy-rail.md
+  - Power Architecture: 06-power-electrical-architecture.md
+  - PLC & Control: 07-plc-control-system.md
+  - RMDE Software: 08-rmde-software-architecture.md
+  - HUD Guidance: 09-hud-driver-guidance.md
+  - Quality Control: 10-quality-control-system.md
+  - Standards Engine: 11-international-standards-engine.md
+  - Prototype BOM: 12-prototype-bom.md
+  - Software Files: 13-software-files.md
+  - Source Map: 14-source-document-map.md
