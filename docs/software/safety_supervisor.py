@@ -1,15 +1,27 @@
-"""Safety supervisor interface. Final safety authority belongs to Safety PLC."""
+"""
+Safety Supervisor
+
+Checks whether robot, gun, induction, pressure and emergency states allow operation.
+"""
+
 from dataclasses import dataclass
 
+
 @dataclass
-class SafetyStatus:
-    emergency_stop_active: bool
-    robot_zone_clear: bool
-    pressure_within_limit: bool
-    temperature_within_limit: bool
-    safety_permissive: bool
+class SafetyState:
+    e_stop_ok: bool
+    robot_safe: bool
+    gun_temperature_ok: bool
+    pressure_ok: bool
+    fire_alarm_ok: bool
+
 
 class SafetySupervisor:
-    def evaluate(self, e_stop: bool, zone_clear: bool, pressure_ok: bool, temp_ok: bool) -> SafetyStatus:
-        permissive = (not e_stop) and zone_clear and pressure_ok and temp_ok
-        return SafetyStatus(e_stop, zone_clear, pressure_ok, temp_ok, permissive)
+    def allow_operation(self, state: SafetyState) -> bool:
+        return all([
+            state.e_stop_ok,
+            state.robot_safe,
+            state.gun_temperature_ok,
+            state.pressure_ok,
+            state.fire_alarm_ok,
+        ])
