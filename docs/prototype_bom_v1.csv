@@ -1,0 +1,61 @@
+Category,Item,Reference Specification,Engineering Function,Priority,Source
+Carrier Platform,Heavy-duty multi-axle truck chassis,8x4 or equivalent,≥30 tons; long wheelbase; rigid robotic superstructure base,Critical,Section 3
+Carrier Platform,Modular superstructure subframe,ST52/equivalent steel,"Vibration-resistant, service-accessible, torsion-aware frame",Critical,Section 2/3
+Power Generation,Industrial turbine generator,2 × 180 kW,"400–480 VAC, 3-phase; parallel bus; optional single-unit prototype evaluation",Critical / verify load,Section 2/3
+Power Generation,Main fuel tank and fuel delivery system,Industrial fuel architecture,"Fuel filtration, air separator, pump, return line, leakage sensor, emergency shutoff",Critical,Section 2
+Electrical Distribution,Main power distribution panel,Industrial LV panel,"Receives generator power, feeds induction, PLC, robot, sensors, compressor",Critical,Section 2
+Electrical Distribution,Load management module,PLC-linked,Priority: safety/PLC → induction → robot → compressor → auxiliaries,Critical,Section 2
+Electrical Distribution,Sub distribution panels,Robot/PLC/sensor panels,"Separated power, signal, and communication routing",Critical,Section 2
+Electrical Distribution,EMI-separated cable channels,Industrial cable routing,Separate high-power induction cables from sensor/camera/communication lines,Critical,Section 2
+Induction Heating,Induction inverter modules,Multi-zone,Segment-based PID power control for staged heating,Critical,Section 1/3
+Induction Heating,Staged induction transfer line,Approx. 4 m reference,"Insulated, multi-zone, high-temperature-compatible paint transfer",Critical,Section 1/3
+Induction Heating,Induction coils,Per heating zone,Coil layout sized after prototype validation,Critical,Section 1
+Induction Heating,Thermal insulation system,High-temperature insulation,Reduces heat loss and protects nearby equipment,Critical,Section 2/3
+Material Storage,Pellet paint tank,"~4,000 kg","Fixed-body/mixer-type tank, low-speed mixer, humidity control",Critical,Section 3
+Material Storage,Glass bead tank,~750 kg,Integrated or separate dosing chamber,Critical,Section 3
+Material Storage,Low-speed internal mixer,Tank-integrated,Prevents bridging and irregular pellet feeding,Critical,Section 1/3
+Paint Transfer,Screw pump / screw feeder,3–8 bar target,"Servo or hydromechanical assisted, heated/insulated, purge-capable",Critical,Section 3
+Paint Transfer,Purge and drainage system,High-temperature safe,"Dual valves, collection container, restart cleaning logic",Critical,Section 2/3
+Application,6-axis industrial robot,KUKA KR class preferred; ABB/FANUC/Yaskawa alternatives,Recommended payload 50–70 kg; industrial controller; PLC integration,Critical,Robot module
+Application,X/Y linear rail system,~1.5 m rail range reference,Extends robot work envelope; left/right and forward/back application positioning,Critical,Section 2
+Application,Robot base and vibration-isolated mounting frame,Industrial-grade,"Ensures repeatability, rigidity, and dynamic stability",Critical,Section 2
+Application,Dual-bell rotary thermoplastic paint gun,Next-generation endpoint,"Rotary bell, dual-bell flow, induction-heated body, air stabilization",Critical innovation,Gun module
+Application,Robot wrist adapter,Heavy-duty end-effector mount,"Carries gun, heated line, air line, purge line, suction hose, sensors",Critical,Robot/Gun module
+Pneumatics,6 bar screw compressor,Industrial screw compressor,"Application gun air, pneumatic valves, cleaning air, auxiliary air",Critical,Section 2
+Pneumatics,Air tank,Matched to compressor,Stabilizes air supply,Critical,Section 2
+Pneumatics,Moisture separator / air dryer,Industrial,Protects pneumatic and cleaning lines,Critical,Section 2
+Pneumatics,Pressure regulators and safety valves,6 bar system,Air pressure control and overpressure safety,Critical,Section 2
+Dust Extraction,Paint dust capture ring / suction manifold,Robot/gun mounted,Captures paint dust near spray zone,Prototype-required,Gun/Robot module
+Dust Extraction,Flexible extraction hose,High-temp / abrasion resistant,Routes dust from robot arm to vehicle dust system,Prototype-required,Gun/Robot module
+Dust Extraction,Industrial jet fan system,High suction,Transfers paint dust to underbody dust tank,Prototype-required,Gun/Robot module
+Dust Extraction,Dust separator and collection tank,Underbody tank,Collects particles for maintenance disposal,Prototype-required,Gun/Robot module
+Automation,Main PLC,Industrial PLC,"Process control, PID loops, interlocks, alarms, communication",Critical,Section 2/3/4
+Automation,Safety PLC / safety controller,Beckhoff TwinSAFE or equivalent class,"Emergency stop, safe shutdown, robot/thermal safety independent from Python",Mandatory,Section 4
+Automation,Robot controller,Vendor controller,Executes robot motion commands and safety zones,Critical,Section 4
+Automation,Servo drives / motor controllers,"For pump, dosing, rail axes",Synchronized speed/position control,Critical,Section 3
+AI Computing,Industrial computer,CPU/GPU option,"RMDE, vision, telemetry, standards engine",Critical,Section 4
+HMI/HUD,Operator HMI panel,Industrial PC/panel,"Process dashboard, alarms, system state",Critical,Section 2/4
+HMI/HUD,HUD ghost-line display,Driver guidance unit,"Target path, ghost line, deviation warning, next action",Critical demo,Section 4
+Sensors,Front LiDAR,Road geometry/lane detection,Pre-survey and road model input,Critical for AI layer,Section 2/4
+Sensors,Side LiDAR / distance sensors,Road edge/curb/shoulder detection,Y-position and edge references,Critical,Section 2
+Sensors,Front cameras,Existing line and road surface detection,Vision input for RMDE,Critical,Section 2/4
+Sensors,Robot area cameras,"Gun, line width, application tracking",Real-time application observation,Critical,Section 2
+Sensors,Rear quality-control camera,Post-application verification,"Width, alignment, continuity, quality feedback",Critical,Section 2/4
+Sensors,RTK-GNSS,Centimeter-grade positioning,Digital road model matching,Critical for field expansion,Section 4
+Sensors,IMU,Vehicle attitude/slope,Motion and road slope compensation,Critical,Section 2/4
+Sensors,Temperature sensors,Multi-point,"Induction line, paint outlet, gun body, tank zones",Critical,Section 2/3
+Sensors,Pressure sensors,Paint and air lines,Paint transfer pressure and air stabilization pressure,Critical,Section 2/3
+Sensors,Flow sensors,Paint and glass bead,Closed-loop flow and dosing verification,Critical,Section 2
+Sensors,Level sensors,"Paint, glass bead, fuel, dust tank",Material availability and maintenance alarms,Critical,Section 2/3
+Sensors,Vibration sensors,Generator/robot/platform,"Fatigue, vibration isolation, safety alarm",Critical,Section 2
+Safety,Emergency stop system,Hardwired + PLC safety,"Robot, induction, pump, generator stop logic",Mandatory,Section 2/3
+Safety,Fire detection and suppression,FM200/aerosol option,Generator and hot-zone protection,Mandatory,Section 2
+Safety,Fuel leakage sensors,Fuel system,Leak detection and shutdown logic,Mandatory,Section 2
+Safety,Thermal shields and hot surface guards,Hot zones,Operator and component protection,Mandatory,Section 2
+Cooling/Filtration,Generator airflow system,Controlled intake/exhaust,Protects robot/sensors from hot exhaust,Critical,Section 2
+Cooling/Filtration,Electronics cooling / panel ventilation,Panel AC/fans,"Protects PLC, inverters, computer",Critical,Section 2
+Cooling/Filtration,Paint/filtering system,High-temp compatible,Reduces contaminants entering gun/pump,Critical,Section 1/2
+Installation,Cable/hose carrier chain,Robot + rail + chassis,"Routes paint, air, power, signal, suction safely",Critical,Section 2
+Installation,Flexible high-temp hoses,Paint/air/purge,Allows robot motion and thermal safety,Critical,Section 2
+Service,Openable service covers,All zones,"Maintenance access for panels, generators, pump, tank, gun",Critical,Section 2/3
+Service,Non-slip maintenance platform,Generator/service zones,Field maintenance safety,Recommended,Section 2
