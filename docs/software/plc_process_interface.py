@@ -1,23 +1,30 @@
-"""PLC process interface packet definitions."""
+"""
+PLC Process Interface
+
+Builds process-command packages for PLC-controlled physical subsystems.
+"""
+
 from dataclasses import dataclass
 
+
 @dataclass
-class ProcessTargetPacket:
-    timestamp_ms: int
-    source_module: str
-    target_module: str
-    paint_temp_target_c: float
-    flow_target_kg_min: float
-    screw_speed_percent: float
-    valve_open: bool
-    induction_power_percent: float
-    safety_permissive: bool
+class PLCProcessCommand:
+    paint_flow_enable: bool
+    gun_heat_enable: bool
+    induction_enable: bool
+    atomizing_air_enable: bool
+    suction_fan_enable: bool
+    rotary_bell_rpm_setpoint: int
+    purge_enable: bool = False
+
 
 class PLCProcessInterface:
-    def build_marking_packet(self, flow_kg_min: float, temp_c: float, safety_ok: bool) -> ProcessTargetPacket:
-        return ProcessTargetPacket(
-            timestamp_ms=0, source_module="RMDE", target_module="Beckhoff_TwinCAT_IPC",
-            paint_temp_target_c=temp_c, flow_target_kg_min=flow_kg_min,
-            screw_speed_percent=50.0, valve_open=safety_ok,
-            induction_power_percent=65.0, safety_permissive=safety_ok,
+    def build_application_command(self, line_required: bool, rpm: int = 250) -> PLCProcessCommand:
+        return PLCProcessCommand(
+            paint_flow_enable=line_required,
+            gun_heat_enable=True,
+            induction_enable=True,
+            atomizing_air_enable=line_required,
+            suction_fan_enable=line_required,
+            rotary_bell_rpm_setpoint=rpm,
         )
