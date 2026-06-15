@@ -1,32 +1,35 @@
 """
 Pre-Survey Module
-Target device: NVIDIA Jetson AGX Orin Industrial
-Purpose: collect and normalize camera, LiDAR, RTK-GNSS and IMU data before RMDE.
+
+Collects and normalizes road survey data from cameras, LiDAR, RTK-GNSS and IMU.
 """
+
 from dataclasses import dataclass
-from typing import Optional
+
 
 @dataclass
-class SurveyPacket:
+class SurveyInput:
     road_width_m: float
     lane_count: int
-    lane_width_m: float
-    road_type_hint: str
-    existing_line_detected: bool
-    gps_lat: Optional[float] = None
-    gps_lon: Optional[float] = None
-    imu_pitch_deg: float = 0.0
-    imu_roll_deg: float = 0.0
+    road_length_m: float
+    road_type: str
     surface_condition: str = "unknown"
+    existing_line_detected: bool = False
+
 
 class PreSurveyModule:
-    def collect(self) -> SurveyPacket:
-        # Placeholder for real camera/LiDAR/RTK/IMU acquisition.
-        return SurveyPacket(
-            road_width_m=5.8,
-            lane_count=2,
-            lane_width_m=2.9,
-            road_type_hint="two_way",
-            existing_line_detected=False,
-            surface_condition="new_asphalt",
+    def collect_manual_prototype_data(
+        self,
+        road_width_m: float,
+        lane_count: int,
+        road_length_m: float,
+        road_type: str,
+        surface_condition: str = "unknown",
+    ) -> SurveyInput:
+        return SurveyInput(
+            road_width_m=road_width_m,
+            lane_count=lane_count,
+            road_length_m=road_length_m,
+            road_type=road_type,
+            surface_condition=surface_condition,
         )
