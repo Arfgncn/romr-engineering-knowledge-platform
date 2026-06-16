@@ -1,7 +1,6 @@
 """
 Telemetry Logger Module
 
-Purpose:
 Records RMDE decisions, PLC process states, robot commands, HUD messages,
 and quality-control results for traceability and future optimization.
 """
@@ -33,7 +32,10 @@ class TelemetryLogger:
         )
         write_header = not self.output_path.exists()
         with self.output_path.open("a", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=["timestamp", "reference_point_id", "event_type", "payload"])
+            writer = csv.DictWriter(
+                f,
+                fieldnames=["timestamp", "reference_point_id", "event_type", "payload"],
+            )
             if write_header:
                 writer.writeheader()
             writer.writerow(asdict(record))
