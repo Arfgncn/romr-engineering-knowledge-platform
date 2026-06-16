@@ -1,59 +1,75 @@
-# ROMR Engineering Knowledge Platform
+---
+title: ROMR Platform
+hide:
+  - navigation
+  - toc
+---
 
-## Executive Summary
+<div class="romr-hero">
 
-Integrated engineering knowledge platform for the AI-Based Autonomous Road Marking Platform.
+<img src="assets/images/arf-linehouse-logo.png" class="romr-logo" alt="ARF Linehouse Logo">
+
+# ROMR Autonomous Road Marking Platform
+
+## AI-Based Thermoplastic Road Marking, Robotic Application and Industrial Automation System
+
+ROMR is an advanced autonomous road marking platform developed under the ARF Linehouse engineering vision.  
+The platform combines artificial intelligence, thermoplastic material handling, induction-assisted heating, robotic line application, digital road modelling and industrial control architecture.
+
+<div class="romr-buttons">
+
+[Access Software Platform](software-access.md){ .md-button .md-button--primary }
+[Technical Documentation](technical-overview.md){ .md-button }
+[Prototype Gallery](prototype-gallery.md){ .md-button }
+
+</div>
+
+</div>
 
 ---
 
-## System Architecture
+## Platform Overview
 
-* [01 System Flow](01-system-flow.md)
-* [02 Pellet Paint System](02-pellet-paint-system.md)
-* [03 Induction Heating System](03-induction-heating-system.md)
+<div class="grid cards" markdown>
 
----
+-   :material-truck-outline: **Prototype Road Marking Vehicle**
 
-## Industrial Rotary Bell Spray Technology
+    ![ROMR Prototype Truck](assets/images/romr-prototype-truck.png)
 
-* [04 Next Generation Thermoplastic Gun](04-next-generation-thermoplastic-gun.md)
+    Mobile industrial platform concept for autonomous or semi-autonomous road marking operations.
 
----
+-   :material-heat-wave: **Induction Heating Demonstrator**
 
-## Robotic Application Platform
+    ![Induction Heating Demo](assets/images/induction-heating-demo.png)
 
-* [05 Robot Arm and XY Rail System](05-robot-arm-xy-rail.md)
+    Early-stage demonstrator for controlled thermal processing and heating architecture validation.
 
----
+-   :material-robot-industrial-outline: **Robotic Application System**
 
-## Power and Control Systems
+    Robotic line application architecture designed for precision, repeatability and operator safety.
 
-* [06 Power Architecture](06-power-electrical-architecture.md)
-* [07 PLC Control System](07-plc-control-system.md)
+-   :material-brain: **AI-Controlled Decision Support**
 
----
+    Digital road model, perception-assisted planning and control logic for next-generation marking operations.
 
-## Software Platform
-
-* [08 RMDE Software Architecture](08-rmde-software-architecture.md)
-* [13 Software Files](13-software-files.md)
+</div>
 
 ---
 
-## Quality Assurance
+## Software Access
 
-* [09 HUD Driver Guidance](09-hud-driver-guidance.md)
-* [10 Quality Control System](10-quality-control-system.md)
+<div class="grid cards" markdown>
 
----
+-   :material-monitor-dashboard: **ROMR Control Interface**
 
-## International Standards
+    [Open Platform](software-access.md){ .md-button .md-button--primary }
 
-* [11 International Standards Engine](11-international-standards-engine.md)
+-   :material-file-document-outline: **Engineering Documentation**
 
----
+    [View Documentation](technical-overview.md){ .md-button }
 
-## Prototype Documentation
+-   :material-image-multiple-outline: **Visual Prototype Library**
 
-* [12 Prototype BOM](12-prototype-bom.md)
-* [14 Source Document Map](14-source-document-map.md)
+    [Open Gallery](prototype-gallery.md){ .md-button }
+
+</div>
