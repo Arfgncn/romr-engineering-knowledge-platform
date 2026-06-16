@@ -30,27 +30,32 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 ## Platform Overview
 
-<div class="grid cards" markdown>
+## Prototype Road Marking Vehicle
 
--   :material-truck-outline: **Prototype Road Marking Vehicle**
+![Prototype Truck](assets/WhatsApp Image 2026-06-03 at 20.55.54.jpg)
 
-    ![ROMR Prototype Truck](assets/WhatsApp Image 2026-06-03 at 20.55.54.jpg)
+Mobile industrial platform concept for autonomous and semi-autonomous road marking operations.
 
-    Mobile industrial platform concept for autonomous or semi-autonomous road marking operations.
+---
 
--   :material-heat-wave: **Induction Heating Demonstrator**
+## Induction Heating Demonstrator
 
-    ![Induction Heating Demo](assets/İndüksiyon ısıtma sistemi 2.png)
+![Induction Heating Demo](assets/İndüksiyon ısıtma sistemi 2.png)
 
-    Early-stage demonstrator for controlled thermal processing and heating architecture validation.
+Early-stage demonstrator for controlled thermal processing and heating architecture validation.
 
--   :material-robot-industrial-outline: **Robotic Application System**
+---
 
-    Robotic line application architecture designed for precision, repeatability and operator safety.
+## Core Technologies
 
--   :material-brain: **AI-Controlled Decision Support**
-
-    Digital road model, perception-assisted planning and control logic for next-generation marking operations.
+- Artificial Intelligence
+- Thermoplastic Material Processing
+- Induction Heating
+- Robotic Application System
+- PLC Control System
+- RMDE Software Architecture
+- Quality Control System
+- International Standards Engine
 
 </div>
 
