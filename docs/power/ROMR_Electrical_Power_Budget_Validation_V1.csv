@@ -1,0 +1,20 @@
+Load Group,Subsystem,Estimated Power kW,Peak Power kW,Duty Factor,Effective Power kW,Validation Status,Notes
+Thermal,Multi-stage induction heating line,90,180,0.7,126,To validate,"Dominant load; depends on paint flow, ΔT, insulation, and efficiency"
+Thermal,Gun body / final heating section,5,12,0.7,8.4,To validate,Maintains gun inlet and dual-bell body temperature
+Material Flow,Screw pump / pellet feed,4,10,0.6,6,Estimate,"Depends on viscosity, pressure, and screw geometry"
+Material Flow,Tank agitator / anti-bridging,2,5,0.5,2.5,Estimate,Intermittent operation
+Pneumatic,6 bar screw compressor,15,30,0.6,18,Estimate,"Air stabilization, purge, pneumatic valves"
+Dust Extraction,Jet fan / suction system,5,12,0.7,8.4,Estimate,Paint dust capture and underbody collection
+Robotics,Industrial robot controller + arm,4,12,0.5,6,Estimate,KUKA/ABB/FANUC/Yaskawa class robot
+Robotics,X/Y rail servo drives,2,8,0.4,3.2,Estimate,Motion dependent
+Control,PLC + Safety PLC + I/O,0.8,1.5,1.0,1.5,Estimate,Critical always-on load
+AI / Vision,RMDE industrial computer + cameras + LiDAR,1.5,3,1.0,3,Estimate,"AI computer, sensors, networking"
+HMI / HUD,"HUD, HMI, displays, communication",0.8,2,1.0,2,Estimate,Driver guidance and operator interface
+Auxiliary,"Cooling, panel ventilation, lighting, service loads",3,8,0.6,4.8,Estimate,Electronics cooling and maintenance loads
+Safety,Fire detection / emergency systems,0.5,1,1.0,1,Estimate,Always-on safety layer
+
+Total Effective Power kW,190.8
+Total Peak Power kW,284.5
+Reference Generator Power kW,360
+Effective Margin kW,169.2
+Peak Margin kW,75.5
