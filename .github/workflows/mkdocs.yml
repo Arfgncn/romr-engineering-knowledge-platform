@@ -63,3 +63,6 @@ docs/
       extra.css
   index.md
 mkdocs.yml
+
+extra_css:
+  - assets/romr.css
