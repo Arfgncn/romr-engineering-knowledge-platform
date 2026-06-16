@@ -1,0 +1,26 @@
+region,road_type,line_type,line_width_cm,thickness,line_gap,color,special_note
+europe,urban_roads,lane_marking,10-12,project/material dependent,3 m / 3 m,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+europe,rural_two_way,center_broken_line,10-15,project/material dependent,3 m / 9 m,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+europe,warning_intersection,broken_warning_line,10-15,project/material dependent,4/6 m or 3/3 m,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+europe,multi_lane,lane_separator,10-15,project/material dependent,7 m / 2 m,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+europe,motorway,lane_marking,15,project/material dependent,6 m / 9-12 m,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+europe,motorway_edge,continuous_edge_line,15-25,project/material dependent,continuous,white,"Europe must be handled as EN performance standards + country-specific geometry tables, not as one fixed European geometry."
+usa,urban_roads,lane_marking,10-15,,3 m / 9 m,white,
+usa,two_way_roads,centerline,10-15,,3 m / 9 m,yellow,
+usa,interstate_edge,edge_line,20-25,,continuous,white,
+usa,no_passing,double_solid_centerline,10-15 x2,,continuous,yellow,
+usa,crosswalk,zebra/transverse,30-60,,variable,white,
+canada,urban_roads,lane_marking,10-15,1.5-3,3 m / 3 m,white,severe_winter
+canada,rural_roads,centerline,10-15,2-4,3 m / 9 m,yellow,severe_winter
+canada,provincial_highways,edge_line,20,3-5,continuous,white,severe_winter
+canada,freeway_motorway,lane_separator,15-20,3-5,6 m / 12 m,white,severe_winter
+canada,snow_risk,high_visibility_edge,20-25,4-5,continuous,white,severe_winter
+russia,,,,,,,"cold-weather resistance, snow visibility, nighttime visibility, snowplow resistance, wear resistance, edge guidance visibility"
+gcc,,,,,,,"Thick-film, UV-resistant, high-retroreflective marking for desert motorways."
+turkiye,,,,,,,
+india,,,,,,,
+japan,,,,,,,Precision-geometry urban marking mode.
+south_korea,,,,,,,Smart city ITS-compatible high-visibility markings.
+china,,,,,,,High-speed guidance standard for expressways.
+airport,,,,,,,"runway, taxiway, apron markings"
+industrial_agv,,,,,,,heavy-wear-resistant safety marking and AGV/robotic guidance lines
