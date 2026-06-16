@@ -1,54 +1,121 @@
-# 2. Pellet Boya Sistemi
+[02-pellet-paint-system.md](https://github.com/user-attachments/files/28995637/02-pellet-paint-system.md)
+# 02 — Pellet Paint Feed System
 
-<div class="gitbar"><a href="../12-prototype-bom/#paint-transfer-and-flow">Git: Vida Pompa / BOM</a><a href="../03-induction-heating-system/">Git: İndüksiyon Isıtma</a><a href="../07-plc-control-system/">Git: PLC Kontrol</a><a href="../software/plc_process_interface.py">Git: Yazılım: plc_process_interface.py</a></div>
+## 1. System Purpose
 
-## Sistem Tanımı
+The Pellet Paint Feed System is the starting point of the ROMR platform.
 
-Pellet boya sistemi, termoplastik boyanın toz veya blok form yerine kontrollü, homojen ve akış davranışı daha öngörülebilir granül formda sisteme beslenmesini sağlar. Amaç, vida pompa ve indüksiyon hattında sürekli ve kararlı malzeme transferidir.
+Process flow:
 
-## Pellet Üretim Süreci
+Pellet Storage → Agitator → Anti-Bridging System → Servo Screw Feeder →
+Flow Conditioning Chamber → Multi-Stage Induction Heating →
+Dual-Bell Rotary Gun → Robotic Application
 
-```mermaid
-flowchart LR
-    A[Powder Thermoplastic Paint] --> B[Melting & Homogenization\n~150°C]
-    B --> C[Filament / Rod Form]
-    C --> D[Cooling Bath]
-    D --> E[Paraffin-Based Anti-Sticking Coating]
-    E --> F[Pelletizing\n≈5 mm diameter\n5–15 mm length]
-    F --> G[Pellet Paint Tank]
-```
+## 2. Pellet Storage Tank
 
-## Teknik Gerekçe
+- Moisture protected tank
+- Conical hopper geometry
+- Inspection hatch
+- Filling port
+- Level sensors
+- Low level alarm
+- Service access
 
-Toz boya doğrudan vida / pompa hattına beslendiğinde köprülenme, düzensiz kütlesel akış, lokal aşırı ısınma, basınç dalgalanması ve kalite bozulması oluşturabilir. Pellet form ise şu avantajları sağlar:
+## 3. Anti-Bridging Architecture
 
-- daha homojen yoğunluk,
-- kontrollü geometri,
-- daha stabil akış,
-- daha öngörülebilir ısı transferi,
-- daha düşük tıkanma riski,
-- daha kararlı debi ve basınç kontrolü.
+Potential issues:
+- Bridging
+- Rat-holing
+- Material compaction
 
-## Donanım Bağlantıları
+Countermeasures:
+- Vibrator motors
+- Internal agitator
+- Conical hopper
+- Level monitoring
+- Torque monitoring
 
-| Bileşen | Görev | Bağlandığı Sistem |
-|---|---|---|
-| Pellet boya tankı | 4000 kg seviyesinde pellet depolama | Vida besleme, şasi, nem kontrolü |
-| Düşük hızlı karıştırıcı | Köprülenme ve düzensiz beslemeyi azaltma | PLC, motor sürücü, tank sensörleri |
-| Vida pompa / screw feeder | Kontrollü boya transferi | Akış sensörü, basınç sensörü, indüksiyon hattı |
-| Nem kontrolü | Pellet topaklanmasını azaltma | Tank havalandırma, kurutucu, servis kapağı |
-| Seviye sensörleri | Malzeme seviyesini takip etme | PLC, HMI, alarm sistemi |
+## 4. Servo Screw Feeder
 
-## PLC ve Sensör İhtiyaçları
+Functions:
+- Closed-loop feed control
+- Flow stabilization
+- Torque monitoring
+- Jam detection
+- Automatic reverse sequence
 
-- tank seviye sensörü,
-- karıştırıcı motor akım izleme,
-- vida pompa motor hız geri bildirimi,
-- vida çıkış basınç sensörü,
-- akış / debi tahmin değeri,
-- tıkanma / aşırı basınç alarmı,
-- hat purge modu durumu.
+## 5. Flow Conditioning Chamber
 
-## Entegrasyon Notu
+Located between feeder and induction system.
 
-Pellet sistemi tek başına malzeme deposu değildir. Induction heating, paint transfer, PLC flow control, robot application ve quality feedback sistemlerinin ilk fiziksel girdisidir.
+Functions:
+- Flow stabilization
+- Pressure equalization
+- Thermal monitoring
+- Feed smoothing
+
+## 6. Sensors
+
+- Pellet level sensor
+- Agitator current sensor
+- Screw torque sensor
+- Flow sensor
+- Pressure sensor
+- Temperature sensor
+
+## 7. PLC Signals
+
+Inputs:
+- tank_low_level
+- bridge_detected
+- screw_overload
+- flow_low
+- flow_high
+
+Outputs:
+- feed_enable
+- feed_speed_reference
+- agitator_enable
+- anti_bridge_vibrator_enable
+
+## 8. Integration with Induction Heating
+
+Pellet Feed
+↓
+Induction Zone 1
+↓
+Induction Zone 2
+↓
+Induction Zone 3
+↓
+Induction Zone 4
+↓
+Gun Inlet
+
+## 9. Integration with Robot System
+
+Pellet System
+↓
+Induction Line
+↓
+Dual-Bell Rotary Gun
+↓
+Industrial Robot
+↓
+Road Application
+
+## 10. Design Principle
+
+The pellet feed system shall operate in closed-loop mode.
+
+Screw speed, flow rate, line pressure and induction temperature shall be evaluated together and adjusted in real time.
+
+## 11. Git Links
+
+[Git: Induction Heating](03-induction-heating-system.md)
+
+[Git: Thermoplastic Gun](04-next-generation-thermoplastic-gun.md)
+
+[Git: PLC System](07-plc-control-system.md)
+
+[Git: BOM](12-prototype-bom.md)
