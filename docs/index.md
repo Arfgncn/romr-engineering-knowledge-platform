@@ -7,7 +7,7 @@ hide:
 
 <div class="romr-hero">
 
-<img src="assets/images/arf-linehouse-logo.png" class="romr-logo" alt="ARF Linehouse Logo">
+<img src="assets/ChatGPT Image 6 May 2026 10_09_54.png" class="romr-logo" alt="ARF Linehouse Logo">
 
 # ROMR Autonomous Road Marking Platform
 
@@ -18,9 +18,9 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 <div class="romr-buttons">
 
-[Access Software Platform](software-access.md){ .md-button .md-button--primary }
-[Technical Documentation](technical-overview.md){ .md-button }
-[Prototype Gallery](prototype-gallery.md){ .md-button }
+[RMDE Software Architecture](08-rmde-software-architecture.md){ .md-button .md-button--primary }
+[System Architecture](01-system-flow.md){ .md-button }
+[Prototype BOM](12-prototype-bom.md){ .md-button }
 
 </div>
 
@@ -34,13 +34,13 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 -   :material-truck-outline: **Prototype Road Marking Vehicle**
 
-    ![ROMR Prototype Truck](assets/images/romr-prototype-truck.png)
+    ![ROMR Prototype Truck](assets/WhatsApp Image 2026-06-03 at 20.55.54.jpg)
 
     Mobile industrial platform concept for autonomous or semi-autonomous road marking operations.
 
 -   :material-heat-wave: **Induction Heating Demonstrator**
 
-    ![Induction Heating Demo](assets/images/induction-heating-demo.png)
+    ![Induction Heating Demo](assets/İndüksiyon ısıtma sistemi 2.png)
 
     Early-stage demonstrator for controlled thermal processing and heating architecture validation.
 
@@ -60,16 +60,16 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 <div class="grid cards" markdown>
 
--   :material-monitor-dashboard: **ROMR Control Interface**
+-   :material-monitor-dashboard: **RMDE Software Architecture**
 
-    [Open Platform](software-access.md){ .md-button .md-button--primary }
+    [Open RMDE Software](08-rmde-software-architecture.md){ .md-button .md-button--primary }
 
 -   :material-file-document-outline: **Engineering Documentation**
 
-    [View Documentation](technical-overview.md){ .md-button }
+    [View System Map](01-system-flow.md){ .md-button }
 
--   :material-image-multiple-outline: **Visual Prototype Library**
+-   :material-image-multiple-outline: **Prototype Bill of Materials**
 
-    [Open Gallery](prototype-gallery.md){ .md-button }
+    [Open Prototype BOM](12-prototype-bom.md){ .md-button }
 
 </div>
