@@ -1,0 +1,11 @@
+Software Layer,Target Hardware,Main File,Related MkDocs Module,Source Document
+Core AI System,NVIDIA Jetson AGX Orin,docs/software/core_ai_system/main.py,docs/08-rmde-software-architecture.md,Section 4 – RMDE Software
+Motion Control,Beckhoff TwinCAT IPC,docs/software/motion_control_system/twincat_motion_interface.py,docs/07-plc-control-system.md,Section 4 – RMDE Software
+Robot Arm Control,KUKA Controller + Beckhoff,docs/software/robot_arm_control/kuka_robot_bridge.py,docs/05-robot-arm-xy-rail.md,Section 4 – RMDE Software
+Flow Control,Beckhoff IPC,docs/software/flow_control_system/paint_flow_controller.py,docs/02-pellet-paint-system.md,Section 4 – RMDE Software
+Induction Heat Control,Beckhoff IPC,docs/software/induction_heat_control/induction_heat_controller.py,docs/03-induction-heating-system.md,Section 4 – RMDE Software
+Speed Synchronization,Beckhoff IPC,docs/software/speed_synchronization/speed_synchronization_module.py,docs/09-hud-driver-guidance.md,Section 4 – RMDE Software
+Decision Engine,NVIDIA Jetson AGX Orin,docs/software/core_ai_system/decision_engine.py,docs/08-rmde-software-architecture.md,Section 4 – RMDE Software
+HUD System,NVIDIA Jetson AGX Orin,docs/software/hud_system/hud_guidance_system.py,docs/09-hud-driver-guidance.md,Section 4 – RMDE Software
+Safety System,Beckhoff Safety PLC,docs/software/safety_system/safety_supervisor.py,docs/07-plc-control-system.md,Section 4 – RMDE Software
+Quality Control AI,NVIDIA Jetson AGX Orin,docs/software/quality_control_ai/quality_control_module.py,docs/10-quality-control-system.md,Section 4 – RMDE Software
