@@ -1,0 +1,12 @@
+Load Category,Component,Estimated Mass kg,Max Mass kg,Distance from Wrist m,Estimated Moment kg*m,Engineering Note
+End Effector,Dual-bell rotary thermoplastic paint gun,12,16,0.18,2.88,Main application tool; high-temperature metal body
+Drive,Hydraulic rotary bell drive / motor group,5,7,0.15,1.05,Rotary bell torque system
+Thermal,Final induction heating section on robot arm,6,9,0.25,2.25,Last heating / temperature maintenance zone
+Paint Line,Heated paint transfer hose with paint inside,4,6,0.3,1.7999999999999998,Includes hot thermoplastic material inside line
+Pneumatic,Atomizing / stabilization air lines,2,3,0.22,0.66,Air lines and fittings
+Cleaning,Purge / cleaning line,2,3,0.22,0.66,Cleaning fluid / purge path
+Extraction,Paint dust extraction hose,4,6,0.35,2.0999999999999996,Flexible hose and suction interface
+Sensors,"Height, temperature, pressure and RPM sensors",2,3,0.2,0.6000000000000001,Sensor package and brackets
+Cabling,"Sensor harness, Ethernet, safety wiring",2,3,0.3,0.8999999999999999,Cable bundle along robot arm
+Adapter,Robot wrist adapter / mounting bracket,4,6,0.12,0.72,Heavy-duty quick-mount plate
+Protection,Thermal shields and vibration isolation parts,3,5,0.18,0.8999999999999999,Protective covers and dampers
