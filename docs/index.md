@@ -24,6 +24,8 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 </div>
 
+</div>
+
 ---
 
 ## Platform Overview
@@ -55,24 +57,12 @@ Early-stage demonstrator for controlled thermal processing and heating architect
 - Quality Control System
 - International Standards Engine
 
-</div>
-
 ---
 
 ## Software Access
 
-<div class="grid cards" markdown>
+[Open RMDE Software](08-rmde-software-architecture.md){ .md-button .md-button--primary }
 
--   :material-monitor-dashboard: **RMDE Software Architecture**
+[View System Map](01-system-flow.md){ .md-button }
 
-    [Open RMDE Software](08-rmde-software-architecture.md){ .md-button .md-button--primary }
-
--   :material-file-document-outline: **Engineering Documentation**
-
-    [View System Map](01-system-flow.md){ .md-button }
-
--   :material-image-multiple-outline: **Prototype Bill of Materials**
-
-    [Open Prototype BOM](12-prototype-bom.md){ .md-button }
-
-</div>
+[Open Prototype BOM](12-prototype-bom.md){ .md-button }
