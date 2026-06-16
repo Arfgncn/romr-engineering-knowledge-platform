@@ -1,39 +1,63 @@
 # ROMR Engineering Knowledge Platform
 
-<div class="gitbar"><a href="01-system-flow/">Git: Sistem Akışı</a><a href="04-next-generation-thermoplastic-gun/">Git: Termoplastik Tabanca</a><a href="13-software-files/">Git: Yazılım Dosyaları</a><a href="12-prototype-bom/">Git: BOM</a></div>
+## Executive Summary
 
-<div class="system-note">
-Bu platform, beş teknik dokümandaki bilgileri özetlemek için değil; mekanik, proses, elektrik, PLC, yazılım, sensör, kalite kontrol ve uluslararası standart katmanlarını tek bir mühendislik ağı içinde birbirine bağlamak için tasarlanmıştır.
-</div>
+Integrated engineering knowledge platform for the AI-Based Autonomous Road Marking Platform.
 
-## Ana Sistem Haritası
+---
 
-```mermaid
-flowchart LR
-    A[Road Survey & Data Acquisition] --> B[Digital Road Model]
-    B --> C[RMDE Decision Engine]
-    C --> D[50 cm Reference Points]
-    D --> E[Robot Arm Commands]
-    E --> F[Pellet Paint Feeding]
-    F --> G[Multi-Stage Induction Heating]
-    G --> H[Next-Generation Rotary Bell / Dual-Disc Paint Gun]
-    H --> I[Road Marking Application]
-    I --> J[Quality Control & Feedback]
-    J --> K[International Standards Validation]
-    K --> C
-```
+## System Architecture
 
-## Modül Kartları
+* [01 System Flow](01-system-flow.md)
+* [02 Pellet Paint System](02-pellet-paint-system.md)
+* [03 Induction Heating System](03-induction-heating-system.md)
 
-<div class="romr-grid">
-<div class="romr-card"><h3>Pellet Boya Sistemi</h3><p>Homojen granül boya, tank, karıştırıcı, vida besleme, debi kontrolü ve indüksiyon hattına düzenli malzeme transferi.</p><a href="02-pellet-paint-system/">Git: Pellet Sistemi</a></div>
-<div class="romr-card"><h3>İndüksiyon Isıtma</h3><p>4 m referans hat, çok kademeli sıcaklık bölgeleri, PID kontrol ve 200–220°C uygulama sıcaklığı yönetimi.</p><a href="03-induction-heating-system/">Git: Isıtma Sistemi</a></div>
-<div class="romr-card"><h3>Yeni Nesil Termoplastik Tabanca</h3><p>Rotary bell / dual-disc, geniş akış geometrisi, hava destekli stabilizasyon, indüksiyon destekli gövde ısıtması ve otomatik iç temizlik.</p><a href="04-next-generation-thermoplastic-gun/">Git: Tabanca</a></div>
-<div class="romr-card"><h3>Robot Kol + X/Y Kızak</h3><p>Koordinat tabanlı uygulama, nozzle yüksekliği, robot hedef pozisyonu ve RMDE bağlantısı.</p><a href="05-robot-arm-xy-rail/">Git: Robot</a></div>
-<div class="romr-card"><h3>RMDE Yazılım Mimarisi</h3><p>Pre-survey, yol sınıflandırma, standart kontrolü, 50 cm referans noktası, robot komutu, HUD ve kalite kontrol.</p><a href="08-rmde-software-architecture/">Git: RMDE</a></div>
-<div class="romr-card"><h3>Uluslararası Standart Motoru</h3><p>Türkiye, Hindistan, Avrupa, ABD, GCC, Kanada, İskandinavya, Japonya, Güney Kore, Çin, havalimanı ve endüstriyel senaryolar.</p><a href="11-international-standards-engine/">Git: Standartlar</a></div>
-</div>
+---
 
-## Platform Kullanım Mantığı
+## Industrial Rotary Bell Spray Technology
 
-Her ana sayfanın üst bölümünde **Git** kısa yol butonları bulunur. Bu butonlar kullanıcıyı doğrudan ilgili ekipman listesine, yazılım dosyasına, PLC sinyallerine, sensör mimarisine, güç mimarisine, standart tablosuna veya kaynak doküman haritasına götürür.
+* [04 Next Generation Thermoplastic Gun](04-next-generation-thermoplastic-gun.md)
+
+---
+
+## Robotic Application Platform
+
+* [05 Robot Arm and XY Rail System](05-robot-arm-xy-rail.md)
+
+---
+
+## Power and Control Systems
+
+* [06 Power Architecture](06-power-electrical-architecture.md)
+* [07 PLC Control System](07-plc-control-system.md)
+
+---
+
+## Software Platform
+
+* [08 RMDE Software Architecture](08-rmde-software-architecture.md)
+* [13 Software Files](13-software-files.md)
+
+---
+
+## Quality Assurance
+
+* [09 HUD Driver Guidance](09-hud-driver-guidance.md)
+* [10 Quality Control System](10-quality-control-system.md)
+
+---
+
+## International Standards
+
+* [11 International Standards Engine](11-international-standards-engine.md)
+
+---
+
+## Prototype Documentation
+
+* [12 Prototype BOM](12-prototype-bom.md)
+* [14 Source Document Map](14-source-document-map.md)
+
+  Update main portal page
+
+  
