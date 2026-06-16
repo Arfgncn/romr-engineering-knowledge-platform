@@ -53,3 +53,13 @@ jobs:
         uses: actions/deploy-pages@v4
 
 
+docs/
+  assets/
+    images/
+      arf-linehouse-logo.png
+      romr-prototype-truck.png
+      induction-heating-demo.png
+    stylesheets/
+      extra.css
+  index.md
+mkdocs.yml
