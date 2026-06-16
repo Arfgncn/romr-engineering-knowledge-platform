@@ -1,0 +1,6 @@
+Test ID,Test Mode,Duration min,Collected Paint kg,Flow Rate kg/h,Paint Temp C,Bell RPM,Air Pressure bar,Line Width cm,Thickness mm,Status,Notes
+GUN-001,Static warm flow,1,2.0,120.0,210,150,2.0,12,1.5,Prototype target,Initial low RPM warm flow
+GUN-002,Static warm flow,1,3.0,180.0,215,250,2.5,14,1.5,Prototype target,Nominal initial case
+GUN-003,Static warm flow,1,3.5,210.0,220,350,3.0,15,1.7,Prototype target,Higher RPM and air stabilization
+GUN-004,Robot motion test,2,5.0,150.0,220,300,2.8,14,1.5,To validate,Robot moving at reference speed
+GUN-005,Longer continuous test,5,15.0,180.0,218,300,2.8,14,1.5,To validate,Thermal stability and clogging check
