@@ -24,8 +24,6 @@ The platform combines artificial intelligence, thermoplastic material handling, 
 
 </div>
 
-</div>
-
 ---
 
 ## Platform Overview
