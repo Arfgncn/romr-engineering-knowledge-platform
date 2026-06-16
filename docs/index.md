@@ -58,6 +58,5 @@ Integrated engineering knowledge platform for the AI-Based Autonomous Road Marki
 * [12 Prototype BOM](12-prototype-bom.md)
 * [14 Source Document Map](14-source-document-map.md)
 
-  Update main portal page
 
   
